@@ -37,7 +37,7 @@ The code is in the initial stages and requires testing with a more number of end
 
 TODO:
 
-- [] Update code for handling VTT/subtitles
+- [ ] Update code for handling VTT/subtitles
 
 ## Thank You
 
