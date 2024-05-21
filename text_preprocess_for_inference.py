@@ -261,14 +261,14 @@ class Phonifier:
 
     def load_lang_dict(self, language, phone_dictionary, dict_preference):            
         # load dictionary for requested language
-        print(dict_preference)
+        # print(dict_preference)
         
         try:
 
             dict_file = language
-            print("language", language)
+            # print("language", language)
             dict_file_path = os.path.join(self.dict_location,dict_file)
-            print("dict_file_path", dict_file_path)
+            # print("dict_file_path", dict_file_path)
             df = pd.read_csv(dict_file_path, delimiter=" ", header=None, dtype=str)
             phone_dictionary[language] = df.set_index(0).to_dict('dict')[1]
 
@@ -278,10 +278,10 @@ class Phonifier:
             phone_dictionary['english'] = df.set_index(0).to_dict('dict')[1]
             
             if dict_preference:
-                print("inside the new dict")
+                # print("inside the new dict")
                 dict_file = dict_preference
                 dict_file_path = os.path.join(self.dict_location, dict_file)
-                print("dict_file_path", dict_file_path)
+                # print("dict_file_path", dict_file_path)
                 df = pd.read_csv(dict_file_path, delimiter=" ", header=None, dtype=str)
                 phone_dictionary[dict_preference] = df.set_index(0).to_dict('dict')[1]
             
@@ -342,19 +342,19 @@ class Phonifier:
         
         if language in phone_dictionary:
             for word in words:
-                print(f"word: {word}")
+                # print(f"word: {word}")
                 preferred_dict = [key for key in phone_dictionary if 'dict' in key or 'dictionary' in key or '_' in key]
                 # print(preferred_dict)
                 if word not in phone_dictionary[preferred_dict[0]] and (language == "english" or (not self.__is_english_word(word))):
-                    print("inside phonify of my dict")
+                    # print("inside phonify of my dict")
                     
                     # non_dict_words.append(word)
                     
                     if word not in phone_dictionary[language] and (language == "english" or (not self.__is_english_word(word))):
-                        print("inside phonify of language")
+                        # print("inside phonify of language")
 
                         non_dict_words.append(word)
-                        print('INSIDE IF CONDITION OF ADDING WORDS')
+                        # print('INSIDE IF CONDITION OF ADDING WORDS')
         else:
             non_dict_words = words
         print(f"word not in dict: {non_dict_words}")
@@ -433,7 +433,7 @@ class Phonifier:
                 # print("utk",word)
                 #checking if the words are there in the preferred dictionary
                 if word in phone_dictionary[preferred_dict[0]]:
-                    print("Word is in the new dict")
+                    # print("Word is in the new dict")
                     phrase_phonified.append(str(phone_dictionary[preferred_dict[0]][word]))
                     
                     #Check if it is a english word
@@ -451,7 +451,7 @@ class Phonifier:
                     phrase_phonified.append(str(phone_dictionary[language][word]))
             # text_phonified.append(self.__post_phonify(" ".join(phrase_phonified),language, gender))
             text_phonified.append(" ".join(phrase_phonified))
-            print(text_phonified)
+            # print(text_phonified)
         return text_phonified
 
     def __merge_lists(self, lists):
@@ -903,7 +903,7 @@ class TTSDurAlignPreprocessor(SharedInit):
         if language not in list(phone_dictionary.keys()):
             phone_dictionary = self.phonifier.load_lang_dict(language, phone_dictionary,dict_preference)
 
-        print(phone_dictionary.keys())
+        # print(phone_dictionary.keys())
         phonified_text = self.phonifier.phonify(phrasified_text, language, gender, phone_dictionary)
         #print("phonetext",phonified_text)
         phonified_text = self.post_processor.textProcesor(phonified_text)
