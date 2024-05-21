@@ -6,7 +6,7 @@ This repository provides an updated preprocessing file and custom_dict for infer
 
 ### Clone the Repository
 
-First, clone the repository:
+First, clone the original repository:
 
 ```bash
 git clone https://github.com/smtiitm/Fastspeech2_HS
