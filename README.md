@@ -1,4 +1,3 @@
-\```markdown
 # FastSpeech2_HS Inference with Custom Dictionary
 
 This repository provides an inference method for the FastSpeech2_HS models using a custom dictionary to improve the pronunciation of domain-specific words and abbreviations that may be mispronounced by the trained model.
@@ -39,4 +38,3 @@ The code is in the initial stages and requires testing with a larger number of t
 ## Thank You
 
 Thank you for using this repository. Your feedback and contributions are welcome to help improve the model and its performance.
-\```
