@@ -8,9 +8,9 @@ This repository provides an inference method for the FastSpeech2_HS models using
 
 First, clone the repository:
 
-\```bash
+```bash
 git clone https://github.com/smtiitm/Fastspeech2_HS
-\```
+```
 
 Alternatively, you can download and copy the necessary files from the above link to your local machine.
 
