@@ -35,6 +35,10 @@ This process helps ensure that domain-specific words,symbols and abbreviations e
 
 The code is in the initial stages and requires testing with a more number of end test cases.
 
+TODO:
+
+Update code for handling VTT/subtitles
+
 ## Thank You
 
 Thank you for using this repository. Your feedback and contributions are welcome to help improve the model and its performance.
