@@ -12,7 +12,7 @@ First, clone the repository:
 git clone https://github.com/smtiitm/Fastspeech2_HS
 ```
 
-Alternatively, you can download and copy the necessary files from the above link to your local machine.
+Alternatively, you can download and copy the above files and paste it into the already cloned repo.
 
 ### Update the Text Preprocessing File
 
@@ -29,11 +29,11 @@ With the custom dictionary in place, the inference process will proceed as follo
 2. If a word is not found in the `Custom_dict`, it will then check the original dictionary.
 3. If the word is not found in either dictionary, the unified parser will parse the word and add it to the dictionary.
 
-This process helps ensure that domain-specific words and abbreviations are pronounced correctly.
+This process helps ensure that domain-specific words,symbols and abbreviations etc. are pronounced correctly as per the users requirements.
 
 ### Note
 
-The code is in the initial stages and requires testing with a larger number of test cases to ensure robustness and accuracy.
+The code is in the initial stages and requires testing with a more number of end test cases.
 
 ## Thank You
 
